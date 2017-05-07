@@ -7,9 +7,9 @@ public class ElencoGare
 	private Vector<Gara> elenco= new Vector<>();
 	
 	/**
-	 * aggiunge una gara ad elenco se non è già presente
+	 * aggiunge una gara ad elenco se non ï¿½ giï¿½ presente
 	 * @param gara
-	 * @return true se è stata inserita, false altrimenti
+	 * @return true se ï¿½ stata inserita, false altrimenti
 	 */
 	public boolean addGara (Gara _gara)
 	{
@@ -73,6 +73,23 @@ public class ElencoGare
 
 	public Vector<Gara> getElenco() {
 		return elenco;
+	}
+	
+	public void aggiungiGara(Gara g) {
+		this.addGara(g);
+	}
+	
+	public int getNumeroGare() {
+		return elenco.size();
+	}
+	
+	public boolean presente(String nome) {
+		boolean flag = false;
+		for(Gara g : elenco) {
+			if(g.getNome().equalsIgnoreCase(nome))
+				flag = true;
+		}
+		return flag;
 	}
 }
 
