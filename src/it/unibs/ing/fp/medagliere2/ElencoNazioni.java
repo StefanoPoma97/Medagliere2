@@ -35,26 +35,26 @@ public class ElencoNazioni {
 	 * argenti se due nazioni hanno stesso numero di ori e di argenti, viene
 	 * messa prima chi ha pi� bronzi
 	 */
-	 public void ordinaMedagliere() {
-	 for (int i = 0; i < elenco.size() - 1; i++) {
-	 for (int j = elenco.size() - 1; j > i; j--) {
-	 if (!(elenco.get(j - 1).getnTotOri() > elenco.get(j).getnTotOri())
-	 || ((elenco.get(j - 1).getnTotOri() == elenco.get(j).getnTotOri())
-	 && (elenco.get(j - 1).getnTotArgenti() > elenco.get(j).getnTotArgenti()))
-	 || ((elenco.get(j - 1).getnTotOri() == elenco.get(j).getnTotOri())
-	 && (elenco.get(j - 1).getnTotArgenti() == elenco.get(j).getnTotArgenti())
-	 && (elenco.get(j - 1).getnTotBronzi() > elenco.get(j).getnTotBronzi())))
-	 {
-	 Nazione n = new Nazione();
-	 n = elenco.get(j - 1);
-	 elenco.set(j - 1, elenco.get(j));
-	 elenco.set(j, n);
-	
-	 }
-	
-	 }
-	 }
-	 }
+//	 public void ordinaMedagliere() {
+//	 for (int i = 0; i < elenco.size() - 1; i++) {
+//	 for (int j = elenco.size() - 1; j > i; j--) {
+//	 if (!(elenco.get(j - 1).getnTotOri() > elenco.get(j).getnTotOri())
+//	 || ((elenco.get(j - 1).getnTotOri() == elenco.get(j).getnTotOri())
+//	 && (elenco.get(j - 1).getnTotArgenti() > elenco.get(j).getnTotArgenti()))
+//	 || ((elenco.get(j - 1).getnTotOri() == elenco.get(j).getnTotOri())
+//	 && (elenco.get(j - 1).getnTotArgenti() == elenco.get(j).getnTotArgenti())
+//	 && (elenco.get(j - 1).getnTotBronzi() > elenco.get(j).getnTotBronzi())))
+//	 {
+//	 Nazione n = new Nazione();
+//	 n = elenco.get(j - 1);
+//	 elenco.set(j - 1, elenco.get(j));
+//	 elenco.set(j, n);
+//	
+//	 }
+//	
+//	 }
+//	 }
+//	 }
 
 	/**
 	 * stampa tutto il medagliere appoggiandosi al vector elenco
