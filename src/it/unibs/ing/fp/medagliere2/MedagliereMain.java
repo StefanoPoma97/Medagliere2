@@ -167,7 +167,7 @@ public class MedagliereMain {
 			case 4: // stamapa medagliere
 
 				// lo ordina
-				// medagliere.ordinaMedagliere();
+				medagliere.ordinaMedagliere();
 				// lo stampa con il metodo printMedagliere
 				System.out.println(medagliere.printMedagliere());
 				break;
