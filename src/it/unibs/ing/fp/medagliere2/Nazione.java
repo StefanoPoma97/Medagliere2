@@ -63,6 +63,7 @@ public class Nazione implements Comparable<Nazione> {
 	@Override
 	public int compareTo(Nazione n) {
 		int c;
+		//mette in ordine decrescente le nazioni secondo l'oro (se metto + ordine crescente)
 		c = -Integer.compare(this.getnTotOri(), n.getnTotOri());
 		if (c == 0)
 			c = -Integer.compare(this.getnTotArgenti(), n.getnTotArgenti());
@@ -71,6 +72,9 @@ public class Nazione implements Comparable<Nazione> {
 		return c;
 	}
 
+	
+	
+	//metodi per test
 	public void aggiungiMedaglia(int pos) {
 		switch (pos) {
 		case 0:

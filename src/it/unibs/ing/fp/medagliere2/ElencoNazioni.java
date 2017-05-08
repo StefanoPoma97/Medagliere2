@@ -63,6 +63,7 @@ public class ElencoNazioni {
 	 *         vinte
 	 */
 	public String printMedagliere() {
+		//ordina secondo il metodo compareTo
 		Collections.sort(elenco);
 		StringBuffer str = new StringBuffer("Elenco nazioni:\n");
 		for (Nazione g : elenco) {
@@ -83,6 +84,9 @@ public class ElencoNazioni {
 		return str.toString();
 	}
 
+	
+	
+	//metodi dei test
 	public void aggiungiNazione(Nazione n) {
 		this.addNazione(n);
 	}

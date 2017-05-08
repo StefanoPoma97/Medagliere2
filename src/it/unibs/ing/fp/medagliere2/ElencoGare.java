@@ -75,6 +75,9 @@ public class ElencoGare
 		return elenco;
 	}
 	
+	
+	
+	//metodi per test
 	public void aggiungiGara(Gara g) {
 		this.addGara(g);
 	}

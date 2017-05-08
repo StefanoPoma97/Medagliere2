@@ -26,6 +26,10 @@ public class MedagliereMain {
 	public static final String INSERISCI_ARGENTO = "Inserisci il nome della nazione che ha vinto l'argento:";
 	public static final String INSERISCI_BRONZO = "Inserisci il nome della nazione che ha vinto il bronzo:";
 
+	
+	//Abbiamo fatto il main così per separare le struttura dati dai metodi INPUT E OUTPUT (diasaccoppiamento dati da gestione input-output), 
+	//anche se sarebbe stato meglio
+	//creare una classe apposita per gestire tutte queste cose, (in modo da rendere più leggero il main).
 	public static void main(String[] args) {
 		ElencoNazioni medagliere = new ElencoNazioni();
 		ElencoGare gare = new ElencoGare();
@@ -34,12 +38,12 @@ public class MedagliereMain {
 
 		boolean ciclo = true;
 
-		medagliere.addNazione(new Nazione("Italia"));
-		medagliere.addNazione(new Nazione("Francia"));
-		medagliere.addNazione(new Nazione("Cipro"));
-
-		gare.addGara(new Gara("Corsa"));
-		gare.addGara(new Gara("Salto"));
+//		medagliere.addNazione(new Nazione("Italia"));
+//		medagliere.addNazione(new Nazione("Francia"));
+//		medagliere.addNazione(new Nazione("Cipro"));
+//
+//		gare.addGara(new Gara("Corsa"));
+//		gare.addGara(new Gara("Salto"));
 
 		// ciclo per il menï¿½ iniziale
 		while (ciclo) {
@@ -79,8 +83,12 @@ public class MedagliereMain {
 				Vector<Nazione> risultato = new Vector<>();
 				Gara g = new Gara(InputDati.leggiStringaNonVuota(SCEGLI_GARA));
 
+				
+				if (!gare.getGareWOResult().contains(g))
+					System.out.println("gara non presente nell'elenco");
+					
 				// se l'elenco delle nazioni ï¿½ vuoto
-				if (medagliere.getNazioni().size() <= 0)
+				else if (medagliere.getNazioni().size() <= 0)
 					System.out.println(ERR_ELENCO_VUOTO);
 
 				// se la gara selta ï¿½ a squadre e ci sono meno di 3 nazioni in

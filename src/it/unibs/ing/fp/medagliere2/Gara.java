@@ -79,6 +79,8 @@ public class Gara {
 			return false;
 	}
 
+	
+	
 	// metodo per TEST
 	public void aggiungiPremiata(Nazione naz, int i) {
 		out[i] = naz;
